@@ -20,5 +20,4 @@ class User < ApplicationRecord
 
   validates :password, presence: true, on: :create
   validates :nickname, presence: true, uniqueness: true
-
 end
