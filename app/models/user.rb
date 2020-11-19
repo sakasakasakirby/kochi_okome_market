@@ -17,7 +17,6 @@ class User < ApplicationRecord
   def already_liked?(item)
     self.likes.exists?(item_id: item.id)
   end
-
   validates :password, presence: true, on: :create
   validates :nickname, presence: true, uniqueness: true
 end
